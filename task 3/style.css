@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    max-width: 800px; 
+    margin: auto;
+}
+
+.slide {
+    width: 100%;
+    display: none; /* Hide all slides by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.slide.active {
+    display: block; /* Show the active slide */
+}
+button{
+    position: absolute;
+    top: 200px;
+}
+.prev, .next {
+    position: absolute;
+    top: 100;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition:all 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .prev, .next {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+}
